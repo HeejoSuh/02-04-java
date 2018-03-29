@@ -61,16 +61,23 @@ public class Main {
     	 ************************************************/
     	//push to list
 		stackObject.push(inputNumber);
-		stackObject.push(inputNumber+1);
-		stackObject.push(inputNumber+2);
+		stackObject.push(inputNumber);
+		stackObject.push(inputNumber);
 		System.out.println("Pushed " + stackObject.at(0));
 		System.out.println("List: " + stackObject.str());
+		
 		//pop from list
 		System.out.println("Poped " + stackObject.pop());
 		System.out.println("List: " + stackObject.str());
+		
 		//peek the top item
 		System.out.println("Peek " + stackObject.peek());
+		
 		//clear whole stack
 		System.out.println("Cleared list: " + stackObject.clear());
+		
+		//pop error
+		System.out.println("pop error " + stackObject.pop());
+
 	}
 }
