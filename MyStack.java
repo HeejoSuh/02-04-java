@@ -20,27 +20,12 @@ public class MyStack<Type> {
 	//create an ArrayList(growable)
 	//Yes it is private
 	private ArrayList<Type> list = new ArrayList<Type>();
-	
-	
-	/*********************************************************
-	 * Use Type to replace places of info type
-	 * 
-	 * 
-	 * public Type  X()		&		public String/Integer/Whatever X()
-	 * ->  return a value of type "Type"
-	 * 
-	 * 
-	 * public void  X()
-	 * ->  no return
-	 *
-	 *************************************************************/
 
 	//-----------------------
 	public String str() {
 		//returns list as a string
 		return list.toString();
 	}
-
 	
 	//-----------------------
 	public Type at(int place) {
@@ -49,22 +34,28 @@ public class MyStack<Type> {
 	}
 
 	//-----------------------
-	public Type peek() {
+	public Type peek() throws Exception {
 		//returns item at the top stack without removing it
+		if(list.size() == 0) {
+			throw new Exception("Empty Stack");
+		}
+	
 		return list.get(list.size() - 1);
 	}	
+	
 	//-----------------------
 	public String clear() {
 		//clear all items in stack
 		list = new ArrayList<Type>();
 		return list.toString();
 	}	
+	
 	//-----------------------
-	public Type pop() {
+	public Type pop() throws Exception  {
 		//pops the last value from the stack and return it
 								//last index
 		if(list.size() == 0) {
-			throw new EmptyStackException();
+			throw new Exception("Empty Stack");
 		}
 		
 		Type value = list.get(list.size() - 1);
