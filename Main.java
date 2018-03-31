@@ -9,15 +9,13 @@
  ****************************************************************************/
 
 import java.util.Scanner;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 //****************************************************************************
 public class Main {
 	//This class tests the stack
 	
 	//-----------------------
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)  throws Exception  {
 		//instantiate a stack object and insert/remove stuff
 		Scanner scanner = new Scanner(System.in);
     	Integer inputNumber = 0;
@@ -41,7 +39,7 @@ public class Main {
     	//instantiate stack
     	//list of integers
     	MyStack<Integer> stackObject = new MyStack<Integer>();
-    	/**************************************************************************
+    	/*************************************************************
     	 *boolean empty() 
     	 *-> Tests if this stack is empty.
     	 *
@@ -57,8 +55,7 @@ public class Main {
 		  
 		  int search(Object o) 
 		  ->   Returns the 1-based position where an object is on this stack.
-    	 ***************************
-    	 ************************************************/
+    	 ************************************************************/
     	//push to list
 		stackObject.push(inputNumber);
 		stackObject.push(inputNumber);
